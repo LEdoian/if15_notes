@@ -18,7 +18,7 @@ MPD
 - GUI klienti: Ario (GTK, multiplatformní), MPDroid (Android), Auremo (Win), ....
 - MPD lze ovládat přes telnet (jednoduchý textový protokol):
 	- `status` - vypíše status
-	- `idle`
+	- `idle` - nečinný dokud nenastane nějaká událost
 - Buzení: pomocí `cron`u, `mpc` a shell scriptu
 	- `mpc toggle`
 	- `mpc play`

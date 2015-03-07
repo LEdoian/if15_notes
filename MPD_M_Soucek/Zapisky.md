@@ -1,0 +1,29 @@
+MPD
+===
+- conf.: Globální:/etc/mpd.conf Lokální(uživatelský):~/.mpdconf
+	- `pid_file`
+	- `db_file`
+	- `playlist_directory`
+	- `log_file`
+	- `state_file` - poslední skladba, 
+	- `music_directory`
+- Vstupy: ALSA, NFS, Samba, http, ftp, soubor, cdio_paranoia (hudební CD), ....
+- jen síťové rozhraní
+- Formáty: vše, co umí ffmpeg, midi, ....
+- Výstupy: null :), Pulseaudio, ALSA, soubor, roura, Shoutcast, Icecast, HTTP (integrovaný server) ....
+- Konzoloví klienti: mpc, ncmpc, ncmpcpp, vimpc, ....
+	- mpc je součástí MPD projektu
+	- ncmpc, ncmpcpp - ncurses
+	- vimpc - ovládá se pomocí vim zkratek
+- GUI klienti: Ario (GTK, multiplatformní), MPDroid (Android), Auremo (Win), ....
+- MPD lze ovládat přes telnet (jednoduchý textový protokol):
+	- `status` - vypíše status
+	- `idle`
+- Buzení: pomocí `cron`u, `mpc` a shell scriptu
+	- `mpc toggle`
+	- `mpc play`
+	- `mpc volume <hlasitost>`
+	- ....
+- `mpc add <adresa>` přidá adresu do playlistu
+	- `mpc add $(youtube-dl -g blablanějakédalšíparametryyoutubedl)` přidá video z YT
+- Slajdy: http://sukuv.sh.cvut.cz/installfest
